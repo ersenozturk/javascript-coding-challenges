@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Letters</title>
+    <style>
+        div {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <textarea name="text" id="text-area" cols="60" rows="10" placeholder="input text"></textarea>
+        <button type="submit">Convert</button>
+    </div>
+    <div class="result">
+    </div>
+    <script>
+        const btn = document.getElementsByTagName("button")[0];
+        const textArea = document.getElementById("text-area");
+        const result = document.querySelector(".result");
+
+
+        btn.addEventListener('click',()=>{
+            const str = textArea.value;
+            const arr = str.split(' ');
+            const emp = []
+            for (let i = 0; i < arr.length; i++) {
+                arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1)
+            }
+            const str2 =  arr.join(" ");
+            result.innerHTML = str2
+        })
+
+    </script>
+</body>
+</html>
