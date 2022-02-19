@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            margin: 150px auto;
+            width: 500px;
+        }
+
+        input {
+            width: 50px;
+        }
+        #opr {
+            width: 150px;
+
+        }
+
+        .calculator{
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calculator">
+            <input type="number" name="n1" id="n1">
+            <input type="text" name="opr" id="opr" placeholder="select one of right   +-/*">
+            <input type="number" name="n2" id="n2">
+        <button type="submit" class="button">RESULT</button>
+        </div>
+    
+        <div class="calc">
+            <span class="span-num1"></span>
+            <span class="span-opr"></span>
+            <span class="span-num2"></span>
+            <span>=</span>
+            <span class="span-end"></span>
+        </div>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
