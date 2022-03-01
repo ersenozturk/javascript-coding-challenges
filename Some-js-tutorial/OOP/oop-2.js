@@ -395,3 +395,102 @@ console.log(hobbyBook('gunes'));
 
 let softwareQuestion = Question('software');
 softwareQuestion('ersen','REACT');
+
+//******************************************************** */
+console.log('***************************************');
+
+//---Getter & Setter #273.ders
+//before
+const me = {
+    firstName : 'ersen',
+    lastName : 'ozturk',
+    getfullName : function () {
+        return `${this.firstName} ${this.lastName}`
+    },
+    setfullName : function (value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+}
+me.setfullName('mikail dokgoz')
+console.log(me.getfullName());
+
+//after
+const me2 = {
+    firstName : 'ersen',
+    lastName : 'ozturk',
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+}
+me2.fullName = 'mikail dokgoz'
+console.log(me2.fullName);
+
+console.log(me);
+console.log(me2);
+
+//******************************************************** */
+console.log('***************************************');
+
+//---Call,Apply & Bind methods #274.ders
+// bu methodlar func üzerinden çağırılır
+
+function greeting() {
+    return `Hello..I'm ${this.name} and my native language is ${this.lang}`;
+}
+
+let p1 = {name:'Mark', lang:'French'}
+console.log(greeting.call(p1)); // parametre yoksa func da apply ile call methodlarının kullanımı aynı
+console.log(greeting.apply(p1));
+console.log(greeting.bind(p1)); // *** dikkat func döner ***
+
+
+greetingMark = greeting.bind(p1); //func dan referans alarak yeni func döner
+console.log(greetingMark());   //
+
+// call ve apply parametre de işler değişir
+function greetingWelcome(a,b) {
+    return `Hello..I'm ${this.name} and my native language is ${this.lang}. Are you interested in ${a} or ${b}`;
+}
+
+console.log(greetingWelcome.call(p1,'REACT','NODE.JS'));
+console.log(greetingWelcome.apply(p1,['REACT','NODE.JS']));
+
+greetingWelcomeMark = greetingWelcome.bind(p1);
+console.log(greetingWelcomeMark('REACT','NODE.JS'));   //
+
+//******************************************************** */
+console.log('***************************************');
+
+//---Call,Apply & Bind uygulama #275.ders
+//func gönderilen herhangi bir sayının belirlibir aralıkta olup olmadığını kontrol edelim
+
+let num ={
+    min : 0,
+    max : 100,
+    checkNumericRange : function(value){
+        if (typeof value !== 'number'){
+            return false;
+        }else{
+            return value>=this.min && value<=this.max;
+        }
+    }
+}
+
+console.log(num.checkNumericRange(20));
+console.log(num.checkNumericRange(-20));
+
+let numm1 = {min : 10 , max : 30};
+
+console.log(num.checkNumericRange.call(numm1,25));
+console.log(num.checkNumericRange.apply(numm1,[52]));
+
+let checkNumber = num.checkNumericRange.bind(numm1);
+
+console.log(checkNumber(56));
