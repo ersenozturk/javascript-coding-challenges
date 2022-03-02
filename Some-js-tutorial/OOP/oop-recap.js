@@ -162,17 +162,3 @@ console.log(makeZeroPlusTen(5,50,callback));
 
 //********************************************************* */
 
-class Personnel {
-    constructor(name,surname,age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
-
-    fullName() {
-        return this.name + ' ' + this.surname
-    }
-}
-
-const ali = new Personnel('ali','deli',3);
-console.log(ali.name);
