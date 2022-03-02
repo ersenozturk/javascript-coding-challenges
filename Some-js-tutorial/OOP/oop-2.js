@@ -52,6 +52,7 @@ console.log(sadik.calcAge());
 console.log(sadik.getName());
 console.log(sadik.hasOwnProperty('name')); // const func
 console.log(sadik.hasOwnProperty('lastName')); //protoda 
+console.log(sadik instanceof Personnn);
 
 //******************************************************** */
 console.log('***************************************');
@@ -88,11 +89,7 @@ console.log(emp2);
 console.log('***************************************');
 
 //---Object.create()  #265.video
-// let emp3 = Object.create(Employee)
-// console.log(emp3);
-// emp3.name = 'habip';
-// emp3.salary = 3500;
-// console.log(emp3.calcSalary());
+
 
 //******************************************************** */
 console.log('***************************************');
@@ -434,6 +431,7 @@ console.log(me2.fullName);
 
 console.log(me);
 console.log(me2);
+
 
 //******************************************************** */
 console.log('***************************************');

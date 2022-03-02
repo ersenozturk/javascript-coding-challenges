@@ -172,14 +172,13 @@ function Student1(name,surname,age) {
 //     return this.name + ' ' + this.surname
 // }
 
-// console.log(studentAyse.fullName());
+Student1.prototype.fullName = function() {return this.name + ' ' + this.surname};
 
-Student1.prototype.fullName = () => {return this.name + ' ' + this.surname};
+const aliStudent1 = new Student1('ali','deli',99);
+console.log(aliStudent1.fullName());
+console.log(aliStudent1);
 
-console.log(studentAyse.fullName());
-console.log(studentAyse);
-
-// ****
+//****
 //***
 
 class Student2 {
