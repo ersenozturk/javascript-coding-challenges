@@ -81,7 +81,7 @@ console.log(rest);
 //********************************************************* */
 
 /*
-function Destruc (color,number,size,year) {
+function Construc (color,number,size,year) {
     this.color = color;
     this.number = number;
     this.size = size;
@@ -91,8 +91,8 @@ function Destruc (color,number,size,year) {
     }
 }
 
-const tryDestruc = new Destruc('black',6,'medium',1900);
-console.log(Object.entries(tryDestruc));
+const tryConstruc = new Construc('black',6,'medium',1900);
+console.log(Object.entries(tryConstruc));
 
 */
 
@@ -161,4 +161,111 @@ console.log(makeZeroPlusTen(5,50,callback));
 */
 
 //********************************************************* */
+
+/* const soldier = new Object();
+console.log(soldier);
+
+soldier.rank = 'colonel'
+soldier.status = 'officer'
+console.log(soldier); 
+
+delete soldier.rank;
+console.log(soldier);  */
+
+
+//********************************************************* */
+
+/* // nested object
+const student = { 
+    name: 'John', 
+    age: 20,
+    marks: {
+        science: 70,
+        math: 75
+    }
+}
+
+console.log(student.marks.science); */
+
+//********************************************************* */
+        //**Object Destructuring
+
+/* const note = {
+    id: 1,
+    title: 'My first note',
+    date: '01/01/1970',
+  };
+  // traditional way
+//   const id = note.id;
+//   const title = note.title;
+//   const date = note.date;
+  
+  // destructuring
+  const { id, title, date } = note;
+  console.log(id, title, date);
+
+
+const hero = {
+    heroname: 'Batman',
+    realName: 'Bruce Wayne'
+  };
+
+const { heroname, realName } = hero;
+
+console.log(heroname);
+console.log(realName); 
+
+// destructure nested objects
+const note = {
+    id: 1,
+    title: 'My first note',
+    date: '01/01/1970',
+    author: {
+      firstName: 'John',
+      lastName: 'Doe',
+      email: 'johndoe@example.com',
+    },
+  };
+  const { id, title, date, author: { firstName, lastName, email } } = note;
+  console.log(`${firstName} ${lastName}`, id, title, date, email);
+
+*/
+
+        //**Array Destructuring
+
+/* const date = [2022, 2, 20];
+// // traditional way
+// const year = date[0];
+// const month = date[1];
+// const day = date[2];
+
+// destructuring
+const [year, month, day] = date;
+console.log(day, month, year); // 20 4 1970
+// skip the second item
+const [year2, , day2] = date;
+console.log(day2, year2); // 20 1970 */
+
+        //destructure the keys and values out of Object.entries()
+
+/* const note = {
+    id: 1,
+    title: 'My first note',
+    date: '25/04/1977',
+  };
+  
+  // Using forEach
+  Object.entries(note).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+  });
+  
+  // Using a for loop
+  for (let [key, value] of Object.entries(note)) {
+    console.log(`${key}: ${value}`);
+  }
+ */
+
+//********************************************************* */
+
+
 
